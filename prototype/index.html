@@ -6,115 +6,266 @@
     <title>Prototype</title>
 </head>
 <style>
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/************************
+         Styling
+*************************/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(170, 210, 255);
+    font-family: cursive;
+    line-height: 1.5;
+}
+
+header,
+main{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+footer{
+    background-color: #444;
+    width: 100%;
+    height: 5%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+h2,p{
+    margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+p{
+    font-size: 14px;
+}
+
+.masthead{
+    padding: 2.5rem 0;
+    background-color: #EEE;
+    background-image: url("https://nzie.org/varunvijay/wp-content/uploads/2019/05/Logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.masthead h1 {
+    text-align: center;
+    font-size: 2.25rem;
+    color: black;
+}
+
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navbar li {
+    width: 20rem;
+    flex-grow: 1;
+}
+
+#navbar li a {
+    display: inline-block;
+    margin-bottom: -1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #444;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+#navbar li a:hover {
+    background-color: rgb(126,126,126);
+    color:darkorange;
+}
+
+.info{
+    display: inline-block;
+    width: 100%;
+    margin-bottom:1rem ;
+    padding: 1rem;
+    background-color: #444;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    }
+
+
+@media (min-width: 35rem) {
     header{
-        background: rgb(44, 44, 44);
-    }
-    h1{
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-
-    p{
-        font-size: 12px;
-        text-align: left;
-        margin: 10px;
-    }
-
-    nav {
-        font-family: Arial, sans-serif;
-        margin: 2rem;
-        max-width: 60rem;
-    }
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    nav li {
-        flex-grow: 1;
-        width: 12rem;
-        margin: 1px;
+        margin-bottom: 3rem;
     }
     
-    .discover{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    main {
         width: 50%;
+        
     }
-    .school{
-        float: left;
-    }
-    .entertain{
-        float: right;
-    }
-
-    .middle{
+    
+    footer{
+        margin: 0 1rem;
         text-align: center;
     }
-
-    .dani{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        background: rgb(49, 49, 49);
+    
+    .info{
+        width: 200%;
+        margin-left:-50%;
     }
+    
+    img{
+        float:left;
+        margin-right:1rem;
+        width: 50%;
+    }
+    
+    
+}
 
-/* Tablet View */
-
+@media (min-width: 80rem){
+    
+    .reusable {
+        display: flex;
+        flex-wrap: wrap
+    }
+    
+    .reusable article {
+        width: 15rem;
+        flex-grow: 1;
+        margin: 1rem;
+    }
+    
+    .reusable article:first-child {
+        width: 100%;
+    }
+    
+}
 </style>
 <body>
     <header>
-        <div class="logo">
-            <img src="./images/logo.svg" alt="logo" width="50px">
+        <div class="masthead">
+            <h1 id="tag-line">
+                Exmouth View Hotel
+            </h1>
         </div>
         <nav>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <ul id="navbar">
+                <li class="Home"><a href="index.html">Home</a></li>
+                <li class="About"><a href="about.html">About</a></li>
+                <li class="Contact"><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <div class="top">
-                <h1>Discover Your ARC</h1>
-                <p>With Algonquin College's newest facilities, there's always something for everyone to discover and enjoy.</p>
-            </div>
-            <div class="discover">
-                <img src="./images/discover.svg" alt="discover" width="200px">
-            </div>
-        </section>
-        <section>
-            <div class="school">
-                <img src="./images/school.jpg" alt="school" width="400px">
-            </div>
-            <div class="middle">
-                <h1>Discover</h1>
-                <h2>Algonquin College</h2>
-                <p>of Applied Arts and Technology is a publicly fund English-language college located in Ottawa, Ontario, Canada. The college serves the National Capital Region and the outlying areas of Eastern Ontario, Western Quebec, and Upstate New York.</p>
-            </div>
-            <div class="dani">
-                <img src="./images/simon.jpg" alt="dani" width="100px">
-            </div>
-            <div class="pres">
-                <h3>Dijanelle Simon</h3>
-                <h3>SA President</h3>
-                <p>"Only with increased capacity can we create a more inclusive program that attacks a great number of students to participate in physical and social activity. The Students' Association is commited to and focused on programming that results in our students taking person ownership for their health."</p>
-            </div>
-        </section>
-        <section>
-            <div class="bottom">
-                <h2>Discover</h2>
-                <h2>The entertainment</h2>
-                <p>at Algonquin College is endless. We currently have the Algonquin College Commons Theatre where we host a variety of events. Now with the coming of the ARC facility, not only will it be providing more space for the students to study, but it will also be bringing in more room for late-night entertainment.</p>
-            </div>
-            <div class="entertain">
-                <img src="./images/entertainment.jpg" alt="entertain" width="400px">
-            </div>
-        </section>
+        <div class="reusable">
+            <section>
+                <h2>
+                    Welcome To The Exmouth View Hotel!
+                </h2>
+                <div class="hotel">
+                    <img src="./images/hotel.jpeg" alt="hotel">
+                </div>
+            </section>
+        </div>
+        <div class="info">
+            <h2>
+                Join Us!
+            </h2>
+        </div>
+        <div>
+            <article>
+                <h2>
+                    Come tour around our city and take part in our upcoming events.
+                </h2><br>
+                <img src="./images/torquay-harbour.jpg" alt="article-image">
+                <p>
+                    Beaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? <br>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora enim ipsam voluptatem incidunt?
+                </p>
+            </article>
+            <article>
+                <h2>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                </h2>
+                <p>
+                    Beaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                </p>
+            </article>
+            <article>
+                <h2>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                </h2>
+                <p>
+                    Beaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                </p><br>
+            </article>
+        </div>
     </main>
     <footer>
-        <h4>Follow Us</h4>
+        <p>
+            Copyright 2019
+        </p>
     </footer>
 </body>
+
 </html>
