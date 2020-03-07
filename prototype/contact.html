@@ -2,90 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
 </head>
+
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+    body {
+        background-color: rgb(170, 210, 255);
+        margin: 2rem;
+        color: yellow;
+    }
+    
+    footer{
+        text-align: center;
+    }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid green;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+    h1 {
+        font-family: sans-serif;
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    #navbar {
+        display;
+        block;
+        width: 100%;
+        margin: 1rem 0 1rem 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        padding: 1rem;
+        float: left;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #navbar li {
+        flex-grow: 1;
+        display: inline;
+        float: left;
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    #navbar li a {
+        display: inline-block;
+        padding: 8px 45px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        color: yellow;
+    }
+
+    footer{
+    background-color: #444;
+    width: 100%;
+    height: 5%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.masthead{
+    padding: 2.5rem 0;
+    background-color: #EEE;
+    background-image: url("https://nzie.org/varunvijay/wp-content/uploads/2019/05/Logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
-input[type=submit]:hover {
-  background-color: #45a085;
+.masthead h1 {
+    text-align: center;
+    font-size: 2.25rem;
+    color: black;
 }
 
-.container {
-  border-radius: 5px;
-  background-color: rgb(0, 160, 120);
-  padding: 20px;
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+#navbar li {
+    width: 20rem;
+    flex-grow: 1;
+}
+
+#navbar li a {
+    display: inline-block;
+    margin-bottom: -1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #444;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+#navbar li a:hover {
+    background-color: rgb(126,126,126);
+    color:darkorange;
+}
+    
 </style>
 
 <body>
     <header>
+        <div class="masthead">
+            <h1 id="tag-line">
+                Exmouth View Hotel
+            </h1>
+        </div>
         <nav>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </nav>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
     </header>
     <main>
-        <section>
-            <div>
-                <h1>We Want to Hear From You</h1>
-                <p>If you have an idea for an activity that you think you and your fellow students would love to participate in that we are not already offering, we want to know about it.</p>
-            </div>
+        <h1>Contact Page</h1>
+        
+        <form>
+  
+  <fieldset>
+    <label for="name">Name</label>
+    <input type="text" name="name">
+  </fieldset>
+  
+  <fieldset>
+    <label for="email">Email</label>
+    <input type="text" name="email">
+  </fieldset>
+  
+  <fieldset>
+    <label for="message">Message</label>
+    <textarea name="message"></textarea>
+  </fieldset>
 
-            <div class="container">
-                <form action="/action_page.php">
-                  <label for="fname">Full Name</label>
-                  <input type="text" id="fname" name="fullname" placeholder="Your name..">
-              
-                  <label for="snumber">Student Number</label>
-                  <input type="text" id="snumber" name="studentnumber" placeholder="Student Number">
-              
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="Email">
-              
-                  <label for="subject">Subject</label>
-                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-              
-                  <input type="submit" value="Submit">
-                </form>
-              </div>
-
-            <div>
-                <h1>Our Location.</h1>
-                <h2>Algonquin College Students' Association</h2>
-                <p>Monday to Friday - 8:30am to 6:00pm</p>
-                <p>1385 Woodroffe Avenue (E114)</p>
-                <p>Ottawa, Ontario</p>
-                <p>K2G 1V8</p>
-                <p>(613) 727-4723 x7711</p>
-            </div>
-        </section>
+  <fieldset>
+    <input type="submit" value="Submit">
+  </fieldset>
+  
+</form>
+        
     </main>
     <footer>
-        <h5>Follow Us</h5>
+      Copyright 2018
+    </nav>
     </footer>
+    
+
 </body>
 </html>
