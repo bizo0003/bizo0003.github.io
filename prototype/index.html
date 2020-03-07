@@ -9,12 +9,65 @@
     header{
         background: rgb(44, 44, 44);
     }
+    h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 
+    p{
+        font-size: 12px;
+        text-align: left;
+        margin: 10px;
+    }
+
+    nav {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+        max-width: 60rem;
+    }
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    nav li {
+        flex-grow: 1;
+        width: 12rem;
+        margin: 1px;
+    }
     
+    .discover{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .school{
+        float: left;
+    }
+    .entertain{
+        float: right;
+    }
+
+    .middle{
+        text-align: center;
+    }
+
+    .dani{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        background: rgb(49, 49, 49);
+    }
+
+/* Tablet View */
+
 </style>
 <body>
     <header>
-        <div></div>
+        <div class="logo">
+            <img src="./images/logo.svg" alt="logo" width="50px">
+        </div>
         <nav>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About</a></li>
@@ -28,7 +81,7 @@
                 <p>With Algonquin College's newest facilities, there's always something for everyone to discover and enjoy.</p>
             </div>
             <div class="discover">
-                <img src="./images/discover.svg" alt="discover" width="500px">
+                <img src="./images/discover.svg" alt="discover" width="200px">
             </div>
         </section>
         <section>
@@ -40,10 +93,10 @@
                 <h2>Algonquin College</h2>
                 <p>of Applied Arts and Technology is a publicly fund English-language college located in Ottawa, Ontario, Canada. The college serves the National Capital Region and the outlying areas of Eastern Ontario, Western Quebec, and Upstate New York.</p>
             </div>
+            <div class="dani">
+                <img src="./images/simon.jpg" alt="dani" width="100px">
+            </div>
             <div class="pres">
-                <div class="dani">
-                    <img src="./images/simon.jpg" alt="dani" width="100px">
-                </div>
                 <h3>Dijanelle Simon</h3>
                 <h3>SA President</h3>
                 <p>"Only with increased capacity can we create a more inclusive program that attacks a great number of students to participate in physical and social activity. The Students' Association is commited to and focused on programming that results in our students taking person ownership for their health."</p>
