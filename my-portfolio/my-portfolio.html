@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css\style.css" >
+    <title>Document</title>
+</head>
+<style>
+    html{
+        font-size: 15px;
+        height: 100%;
+    }
+    
+    body{
+        background-color: rgb(66, 11, 64);
+        color: white;
+    }
+
+    footer{
+        margin-top: 15em;
+        text-align: center;
+    }
+
+     h1{
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 40px;
+    }
+
+    p{
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .clearfix::after{
+        content:"";
+        display:block;
+        clear:left;
+    }
+    video{
+        display: inline-block;
+        width: 30%;
+        height: auto;
+        margin: 0 1.5rem 1rem 0;
+        float: left;
+    }
+
+    ul li{
+    display: inline-block; /* takes away the bullets on the list */
+    list-style-type: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-decoration-line: none;
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+nav a:hover{
+    color: pink;
+}
+
+nav a:active{
+    color:red;
+}
+
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navbar li {
+    width: 20rem;
+    flex-grow: 1;
+}
+
+
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="my-portfolio.html">My Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+                <h1>
+                    RoyalBiz Media
+                </h1>
+    </header>
+    <main>
+        <article class="article clearfix">
+            <h2>My Portfolio</h2>
+            <figure>
+                    <video width="500" controls>
+                        <source src="video\Beauty_Of_Nature_Time_Lapse__Free_HD_Video_-_No_Copyright.mp4" type="video/mp4">
+                        </video>
+                        <h3>Beauty Of Nature Time Lapse</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, laboriosam, debitis corporis laudantium pariatur labore repellat necessitatibus vitae, beatae ipsam qui nemo dicta at distinctio! Numquam aliquid illum, aspernatur molestiae at porro odit nulla magnam consectetur eligendi, optio quod aperiam perferendis possimus necessitatibus neque eos accusamus esse perspiciatis fugiat modi!</p>
+                </figure>
+        </article>
+            <figure>
+                <video width="500" controls>
+                <source src="video\City_Life__Drone_Video_-_Free_HD_Video_-_no_copyright.mp4" type="video/mp4">
+                </video>
+                <h3>City Life</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, laboriosam, debitis corporis laudantium pariatur labore repellat necessitatibus vitae, beatae ipsam qui nemo dicta at distinctio! Numquam aliquid illum, aspernatur molestiae at porro odit nulla magnam consectetur eligendi, optio quod aperiam perferendis possimus necessitatibus neque eos accusamus esse perspiciatis fugiat modi!</p>
+                </figure>
+    </main>
+    <footer>
+            <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="my-portfolio.html">My Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+          <h3>Copyright 2019</h3>
+        </footer>
+</body>
+</html>

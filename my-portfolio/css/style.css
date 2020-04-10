@@ -1,0 +1,127 @@
+html{
+    font-size: 15px;
+    height: 100%;
+}
+
+body{
+    background-color: rgb(66, 11, 64);
+    color: white;
+}
+/* form */
+#container{
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+/* title */
+h1{
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    line-height: 5px;
+    margin-top: 5rem;
+}
+
+h1, h2, h3{
+    text-align: center; /* brings text into the center of the page */
+    font-family: 'Great Vibes', cursive;
+}
+
+h2{
+    line-height: 10rem;
+    font-size: 45px;
+    margin-top: 3em;
+}
+/* links */
+ul li{
+    display: inline-block; /* takes away the bullets on the list */
+    list-style-type: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-decoration-line: none;
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+nav a:hover{
+    color: pink;
+}
+
+nav a:active{
+    color:red;
+}
+
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navbar li {
+    width: 20rem;
+    flex-grow: 1;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(56, 56, 56);
+    margin-top: 3rem;
+    color:white;
+}
+
+picture{
+    display: inline-block;
+    margin-bottom: 10rem;
+}
+
+video{
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-right: 50%;
+}
+
+
+@media screen and (min-width: 600px) {
+    h1{
+        font-size: 60px;
+    }
+    video{
+        width: 100%;
+        margin-bottom: 3rem;
+        margin-right: 50%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    h1{
+        font-size: 65px;
+    }
+
+    video{
+        width: 100%;
+        margin-bottom: 3rem;
+        margin-right: 10rem;
+    }
+
+    footer{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        margin-left: -25rem;
+        display: inline-block;
+        margin-bottom: -1rem;
+        width: 150%;
+        padding: 1rem;
+        background-color: #444;
+        text-align: center;
+        text-decoration: none;
+        color: white; 
+      }
+      video{
+        width: 50%;
+        margin-bottom: 3rem;
+        margin-left: 50%;
+    }
+}
